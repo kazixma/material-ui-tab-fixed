@@ -354,6 +354,7 @@ class Tabs extends React.Component {
             onScroll={this.handleTabsScroll}
           >
             <div className={flexContainerClassName}>{children}</div>
+            {this.state.mounted && <div className="indicator-line"></div>}
             {this.state.mounted && indicator}
           </div>
           {conditionalElements.scrollButtonRight}
